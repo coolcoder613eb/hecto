@@ -41,7 +41,7 @@ impl Terminal {
         Self::clear_screen();
         terminal::disable_raw_mode().ok();
         Self::reset_colors();
-        println!("now quit hecto");
+        //println!("now quit hecto");
     }
 
     pub fn read() -> Result<Event, std::io::Error> {
