@@ -51,7 +51,7 @@ impl Terminal {
         }
     }
 
-    pub fn set_curor_position(pos: &Position) {
+    pub fn set_cursor_position(pos: &Position) {
         let Position {mut x, mut y} = pos;
         x = x.saturating_add(1);
         y = y.saturating_add(1);

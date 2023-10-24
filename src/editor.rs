@@ -91,7 +91,7 @@ impl Editor {
 
     fn refresh_screen(&mut self) -> Result<(), std::io::Error> {
         Terminal::cursor_hide();
-        Terminal::set_curor_position(&Position::default());
+        Terminal::set_cursor_position(&Position::default());
         if self.if_quit == true {
             Terminal::quit();
         }
@@ -99,7 +99,7 @@ impl Editor {
             self.draw_rows();
             self.draw_status_bar();
             self.draw_message_bar();
-            Terminal::set_curor_position(&Position {
+            Terminal::set_cursor_position(&Position {
                 x:self.cursor_position.x.saturating_sub(self.offset.x).saturating_add(self.row_num_indent), 
                 y:self.cursor_position.y.saturating_sub(self.offset.y),
             });
